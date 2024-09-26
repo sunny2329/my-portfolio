@@ -12,8 +12,8 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
-    src:string,
-    alt:string
+    src: string;
+    alt: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -23,14 +23,17 @@ export const InfiniteMovingCards = ({
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
 
+  const [start, setStart] = useState(false);
+
   useEffect(() => {
     addAnimation();
   }, []);
-  const [start, setStart] = useState(false);
+
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
 
+      // Clone the content for seamless infinite scroll
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
         if (scrollerRef.current) {
@@ -43,12 +46,13 @@ export const InfiniteMovingCards = ({
       setStart(true);
     }
   }
+
   const getDirection = () => {
     if (containerRef.current) {
       if (direction === "left") {
         containerRef.current.style.setProperty(
           "--animation-direction",
-          "forwards"
+          "normal"
         );
       } else {
         containerRef.current.style.setProperty(
@@ -58,10 +62,11 @@ export const InfiniteMovingCards = ({
       }
     }
   };
+
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "5s");
+        containerRef.current.style.setProperty("--animation-duration", "8s");
       } else if (speed === "normal") {
         containerRef.current.style.setProperty("--animation-duration", "40s");
       } else {
@@ -69,26 +74,49 @@ export const InfiniteMovingCards = ({
       }
     }
   };
+
   return (
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 max-w-7xl overflow-hidden",
         className
       )}
+      style={{
+        "--animation-direction": "normal",
+        "--animation-duration": "40s", // Default to normal speed
+      } as React.CSSProperties}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
-          start && "animate-scroll ",
+          "flex min-w-full shrink-0 gap-4 w-max flex-nowrap",
+          start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
         {items.map((item, idx) => (
-          <Logo src = {item.src} />
+          <li key={idx} className="flex-shrink-0">
+            <Logo src={item.src} />
+          </li>
         ))}
       </ul>
+
+      <style jsx>{`
+        .animate-scroll {
+          animation: scroll var(--animation-duration) linear infinite
+            var(--animation-direction);
+        }
+
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </div>
   );
 };
