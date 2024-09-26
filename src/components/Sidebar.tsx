@@ -7,16 +7,13 @@ function Sidebar() {
   return (
     <div className=''>
       <img src="" alt="myPhoto" />
-      <h3>
+      <h3 className='my-4 text-3xl font-medium tracking-wider'>
         <span>Sobhit </span>
         Sinha
       </h3>
-      <p>Web Developer</p>
-      <p><GiTie className='w-6 h-6' />Download Resume</p>
-      <div>
-        <a href="">
-          <AiFillYoutube className='w-8 h-8' />
-        </a>
+      <p className='px-2 py-1 my-3 bg-gray-200 rounded-full'>Web Developer</p>
+      <a className='flex items-center justify-center px-2 py-1 my-3 bg-gray-200 rounded-full' href='' download='name'><GiTie className='w-6 h-6' />Download Resume</a>
+      <div className='flex justify-around my-5 text-green-500'>
         <a href="">
           <AiFillGithub className='w-8 h-8' />
         </a>
