@@ -9,11 +9,6 @@ const Sidebar = () => {
   // };
   return (
     <>
-      {/* <img
-        src="https://sumitdey.netlify.app/static/media/max.9d3a6d3e.jpg"
-        alt="avatar"
-        className="w-32 h-32 mx-auto border rounded-full "
-      /> */}
       <Image
         width="128"
         height="128"
@@ -64,19 +59,18 @@ const Sidebar = () => {
         style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
       >
         <div className="flex items-center justify-center">
-          <GoLocation className="mr-2" /> <span>Kolkata,India </span>
+          <GoLocation className="mr-2" /> <span>Jaipur,India </span>
         </div>
-        <p className="my-2 "> code.sumax@gmail.com </p>
-        <p className="my-2"> 8514961665 / 8640960375 </p>
+        <p className="my-2">sobhit230@gmail.com</p>
+        <p className="my-2">+91-9358250619</p>
       </div>
 
       {/* Email Button */}
 
       <button
         className="w-8/12 px-5 py-2 text-white bg-black rounded-full cursor-pointer bg-gradient-to-r from-green to-blue-500 hover:scale-105 focus:outline-none"
-      // onClick={() => window.open("mailto:code.sumax@gmail.com")}
       >
-        Email me
+        <a href="mailto:sobhit230@gmail.com">Email me</a>
       </button>
       <button
         className="w-8/12 px-5 py-2 my-4 text-white bg-black rounded-full cursor-pointer bg-gradient-to-r from-green to-blue-500 focus:outline-none hover:scale-105 "
