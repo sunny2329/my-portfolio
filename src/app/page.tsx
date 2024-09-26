@@ -1,6 +1,5 @@
 'use client'
 import { motion } from "framer-motion";
-import { GetServerSideProps, GetServerSidePropsContext, NextPage } from "next";
 import { fadeInUp, routeFade, stagger } from "../animations";
 import ServiceCard from "../components/ServiceCard";
 import { services } from "../data";
