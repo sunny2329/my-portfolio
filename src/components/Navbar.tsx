@@ -1,6 +1,7 @@
+'use client'
 import { useState, useEffect, FunctionComponent } from 'react'
-import { useRouter } from 'next/router'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const NavItem: FunctionComponent<{
     active: string
@@ -10,19 +11,19 @@ const NavItem: FunctionComponent<{
 }> = ({ active, setActive, name, route }) => {
     return active !== name ? (
         <Link href={route}>
-            <a>
-                <span
-                    className='mx-2 cursor-pointer hover:border-b-4 hover:text-green'
-                    onClick={() => setActive(name)}>
-                    {name}
-                </span>
-            </a>
+            \
+            <span
+                className='mx-2 cursor-pointer hover:border-b-4 hover:text-green'
+                onClick={() => setActive(name)}>
+                {name}
+            </span>
+
         </Link>
     ) : null
 }
 
 const Navbar = () => {
-    const { pathname } = useRouter()
+    const pathname = usePathname();
 
     const [active, setActive] = useState('')
 
