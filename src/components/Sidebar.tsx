@@ -2,6 +2,7 @@ import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
 import { GiTie } from "react-icons/gi";
 import { GoLocation } from "react-icons/go";
 import Image from "next/image";
+import { InfiniteMovingCardsDemo } from "./InfiniteSlider";
 const Sidebar = () => {
 
   // const changeMode = () => {
@@ -19,9 +20,7 @@ const Sidebar = () => {
       <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan">
         <span className="text-green-600">Sobhit </span>Sinha
       </h3>
-      <p className="px-2 py-1 my-3 bg-gray-200 rounded-full dark:bg-black-200">
-        Web Developer
-      </p>
+      <InfiniteMovingCardsDemo/>
       {/* Resume */}
       <a
         href="https://drive.google.com/file/d/1KhoGVOOkyk_iHZA-s_Tq4mfFusufXRpl/view?usp=drive_link"

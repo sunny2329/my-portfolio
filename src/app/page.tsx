@@ -15,7 +15,7 @@ const About = () => {
       exit="exit"
     >
       <Head>
-        <title>Sumit Dey | Web Developer</title>
+        <title>Sobhit Sinha | Web Developer</title>
       </Head>
       {/* // h5 */}
       <h4 className="my-3">
