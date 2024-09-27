@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import { IService } from "../types";
+import { WobbleCard } from "./ui/wobble-card";
 // import { motion } from 'framer-motion'
 
 const ServiceCard: FunctionComponent<{ service: IService }> = ({
@@ -13,13 +14,17 @@ const ServiceCard: FunctionComponent<{ service: IService }> = ({
     }
 
     return (
-        <div className="flex items-center p-2 space-x-4 ">
-            <Icon className="w-12 h-12 text-green-600" />
-            <div className="">
-                {/* //? THIS font medium */}
-                <h5 className="font-bold">{title}</h5>
-                <p dangerouslySetInnerHTML={createMarkup()} />
-            </div>
+        <div className="flex items-center p-0 space-x-4 ">
+            <WobbleCard>
+
+                <Icon className="w-12 h-12 text-[#0ae448]" />
+                <div className="">
+                    {/* //? THIS font medium */}
+                    <h5 className="font-bold">{title}</h5>
+                    <p dangerouslySetInnerHTML={createMarkup()} />
+                </div>
+            </WobbleCard>
+
         </div>
     );
 };

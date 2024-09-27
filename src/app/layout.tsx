@@ -47,7 +47,7 @@ export default function RootLayout({
             </div>
 
             {/* Main content - Expand to almost touch the right side of the screen */}
-            <div className="flex flex-col col-span-12 overflow-hidden bg-[#0e100f]/85 rounded-2xl dark:bg-black-500 dark:text-white lg:col-span-8 xl:col-span-9 shadow-custom-light text-white dark:shadow-custom-dark lg:mr-0 xl:mr-0">
+            <div className="flex flex-col col-span-12 overflow-hidden bg-[#0e100f] rounded-2xl dark:bg-black-500 dark:text-white lg:col-span-8 xl:col-span-9 shadow-custom-light text-white dark:shadow-custom-dark lg:mr-0 xl:mr-0">
               {/* //!navbar */}
               <Navbar />
               {/* //!about */}

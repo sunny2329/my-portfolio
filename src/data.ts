@@ -29,19 +29,7 @@ export const services: IService[] = [
         Icon: MdDeveloperMode,
         title: "Competitive Coder",
         about: "a daily problem solver in <b>HackerRank</b>  and <b>Leet Code</b> ",
-    },
-    {
-        Icon: AiOutlineAntDesign,
-        title: "UI/UX designer",
-        about:
-            "stunning user interface designer using <b>Figma</b>  and  <b>Framer</b> ",
-    },
-    {
-        Icon: RiComputerLine,
-        title: "Whatever",
-        about:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis minima autem!",
-    },
+    }
 ];
 
 export const languages: ISkill[] = [
