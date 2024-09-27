@@ -17,10 +17,10 @@ const Sidebar = () => {
         alt="avatar"
         className="mx-auto border rounded-full "
       />
-      <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan">
-        <span className="text-green-600">Sobhit </span>Sinha
+      <h3 className="my-4 text-3xl font-medium font-serif text-[#fffce1]">
+        Sobhit Sinha
       </h3>
-      <InfiniteMovingCardsDemo/>
+      <InfiniteMovingCardsDemo />
       {/* Resume */}
       <a
         href="https://drive.google.com/file/d/1KhoGVOOkyk_iHZA-s_Tq4mfFusufXRpl/view?usp=drive_link"
