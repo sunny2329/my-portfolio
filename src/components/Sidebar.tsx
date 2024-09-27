@@ -3,6 +3,9 @@ import { GiTie } from "react-icons/gi";
 import { GoLocation } from "react-icons/go";
 import Image from "next/image";
 import { InfiniteMovingCardsDemo } from "./InfiniteSlider";
+import { TextRevealCard } from "./ui/text-reveal-card";
+import { TypewriterEffect, TypewriterEffectSmooth } from "./ui/typewriter-effect";
+
 const Sidebar = () => {
 
   // const changeMode = () => {
@@ -17,20 +20,23 @@ const Sidebar = () => {
         alt="avatar"
         className="mx-auto border rounded-full "
       />
-      <h3 className="my-4 text-3xl font-medium font-serif text-[#fffce1]">
-        Sobhit Sinha
+      <h3 className="font-bold mt-0 mb-0" style={{ fontFamily: 'sans-serif' }}>
+        <TypewriterEffectSmooth words={[{ text: 'SOBHIT', className: 'text-[1.7rem] text-[#fffce1]' }, { text: 'SINHA', className: 'text-[1.7rem] text-[#fffce1]' }]} />
       </h3>
       <InfiniteMovingCardsDemo />
       {/* Resume */}
-      <a
-        href="https://drive.google.com/file/d/1KhoGVOOkyk_iHZA-s_Tq4mfFusufXRpl/view?usp=drive_link"
-        download="Sobhit Sinha Resume.pdf"
-        target='_blank'
-        className="flex items-center justify-center px-2 py-1 my-2 bg-gray-200 rounded-full cursor-pointer dark:bg-black-200"
-      >
-        <GiTie className="w-6 h-6" />
-        <span>Resume</span>
-      </a>
+      <button>
+        <a
+          href="https://drive.google.com/file/d/1KhoGVOOkyk_iHZA-s_Tq4mfFusufXRpl/view?usp=drive_link"
+          download="Sobhit Sinha Resume.pdf"
+          target='_blank'
+          className="flex items-center justify-center px-2 py-1 my-2 bg-gray-200 rounded-full cursor-pointer dark:bg-black-200"
+        >
+          <GiTie className="w-6 h-6" />
+          <span>Resume</span>
+        </a>
+      </button>
+
 
       {/* Socials */}
       <div className="flex justify-around w-9/12 mx-auto my-5 text-green md:w-full ">

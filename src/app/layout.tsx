@@ -33,14 +33,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
+        className={`bg-black`}
+        style={{fontFamily:'Inter'}}
       >
         <div className="h-full relative w-full overflow-hidden bg-black flex flex-col items-center justify-center rounded-lg">
           <BoxesCore />
 
           <div className="grid z-10 grid-cols-12 gap-6 px-5 my-14 lg:mb-0 md:mb-16 sm:px-20 md:px-32 lg:px-10 xl:px-12">
             {/* Sidebar - Keep size increased */}
-            <div className="h-full col-span-12 p-4 text-base text-center bg-[#0e100f] lg:col-span-4 xl:col-span-3 rounded-2xl dark:bg-black-500 shadow-custom-light dark:shadow-custom-dark">
+            <div className="h-full col-span-12 p-4 text-base text-center bg-[#0e100f]/80 lg:col-span-4 xl:col-span-3 rounded-2xl dark:bg-black-500 shadow-custom-light dark:shadow-custom-dark">
               {/* //!sidebar */}
               <Sidebar />
             </div>
