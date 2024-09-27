@@ -4,6 +4,7 @@ import { fadeInUp, routeFade, stagger } from "../animations";
 import ServiceCard from "../components/ServiceCard";
 import { services } from "../data";
 import Head from "next/head";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 const About = () => {
 
   return (
@@ -18,12 +19,9 @@ const About = () => {
         <title>Sobhit Sinha | Web Developer</title>
       </Head>
       {/* // h5 */}
-      <h4 className="my-3">
-        I am currently pursuing B.Tech Degree(Final Year) in Computer Science
-        Engineering from Academy of Technology. I have 3+ years of experience in
-        Web Development and I have a Youtube Channel where I teach Full Stack
-        Web Development
-      </h4>
+      <div className="text-white">
+        <TextGenerateEffect words="I specialize in building responsive, high-performance web apps using the MERN stack and TailwindCSS. With experience from a successful internship, I deliver clean, scalable solutions from frontend to backend." />
+      </div>
       <div
         className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-black-100"
         style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
@@ -44,8 +42,8 @@ const About = () => {
               className="col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-black-200 md:col-span-1 "
               key={service.title}
               variants={fadeInUp}
-              // animate="animate"
-              // initial="initial"
+            // animate="animate"
+            // initial="initial"
             >
               <ServiceCard service={service} />
             </motion.div>

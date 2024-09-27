@@ -41,13 +41,13 @@ export default function RootLayout({
 
           <div className="grid z-10 grid-cols-12 gap-6 px-5 my-14 lg:mb-0 md:mb-16 sm:px-20 md:px-32 lg:px-10 xl:px-12">
             {/* Sidebar - Keep size increased */}
-            <div className="h-full col-span-12 p-4 text-base text-center bg-[#0e100f]/80 lg:col-span-4 xl:col-span-3 rounded-2xl dark:bg-black-500 shadow-custom-light dark:shadow-custom-dark">
+            <div className="h-full col-span-12 p-4 text-base text-center bg-[#0e100f] lg:col-span-4 xl:col-span-3 rounded-2xl dark:bg-black-500 shadow-custom-light dark:shadow-custom-dark">
               {/* //!sidebar */}
               <Sidebar />
             </div>
 
             {/* Main content - Expand to almost touch the right side of the screen */}
-            <div className="flex flex-col col-span-12 overflow-hidden bg-blue-500/85 rounded-2xl dark:bg-black-500 dark:text-white lg:col-span-8 xl:col-span-9 shadow-custom-light dark:shadow-custom-dark lg:mr-0 xl:mr-0">
+            <div className="flex flex-col col-span-12 overflow-hidden bg-[#0e100f]/85 rounded-2xl dark:bg-black-500 dark:text-white lg:col-span-8 xl:col-span-9 shadow-custom-light text-white dark:shadow-custom-dark lg:mr-0 xl:mr-0">
               {/* //!navbar */}
               <Navbar />
               {/* //!about */}
