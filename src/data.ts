@@ -40,52 +40,72 @@ export const languages: ISkill[] = [
     },
     {
         Icon: BsCircleFill,
-        name: "Java Script",
+        name: "JavaScript",
+        level: "85",
+    },
+    {
+        Icon: BsCircleFill,
+        name: "C++",
         level: "60",
     },
     {
         Icon: BsCircleFill,
-        name: "React Native",
-        level: "80",
+        name: "C",
+        level: "60",
     },
     {
         Icon: BsCircleFill,
-        name: "React",
-        level: "70",
+        name: "SQL",
+        level: "50",
     },
     {
         Icon: BsCircleFill,
-        name: "Django",
-        level: "80",
-    },
-    {
-        Icon: BsCircleFill,
-        name: "Bootstrap",
-        level: "80",
-    },
+        name: "TypeScript",
+        level: "60",
+    }
 ];
 
 export const tools: ISkill[] = [
     {
         Icon: BsCircleFill,
-        name: "Figma",
-        level: "85",
+        name: "React",
+        level: "80",
     },
     {
         Icon: BsCircleFill,
-        name: "Photoshop",
-        level: "45",
+        name: "NextJS",
+        level: "70",
     },
     {
         Icon: BsCircleFill,
-        name: "Illustrator",
+        name: "NodeJS",
+        level: "75",
+    },
+    {
+        Icon: BsCircleFill,
+        name: "Express",
+        level: "70",
+    },
+    {
+        Icon: BsCircleFill,
+        name: "MongoDB",
+        level: "75",
+    },
+    {
+        Icon: BsCircleFill,
+        name: "Docker",
+        level: "50",
+    },
+    {
+        Icon: BsCircleFill,
+        name: "Redux Toolkit",
+        level: "70",
+    },
+    {
+        Icon: BsCircleFill,
+        name: "TailwindCSS",
         level: "60",
-    },
-    {
-        Icon: BsCircleFill,
-        name: "Framer",
-        level: "45",
-    },
+    }
 ];
 
 export const projects: IProject[] = [
