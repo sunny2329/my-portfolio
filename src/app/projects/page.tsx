@@ -113,27 +113,32 @@ const Projects = () => {
                                     <h2 className="text-2xl font-semibold">{selectedProject.name}</h2>
                                     <p className="mt-2">{selectedProject.description}</p>
                                     <div className="flex mt-4 space-x-3">
-                                        <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 w-[30%]">
+                                        <button className="mr-7 mt-4">
                                             <a
                                                 href={selectedProject.github_url}
                                                 className="flex items-center justify-center w-full h-full"
                                             >
-                                                <AiFillGithub /> <span className="ml-3"> Github</span>
+                                                <AiFillGithub size={24} className="text-[#fffce1]" /> {/* Set icon size and color */}
+                                                <span className="ml-3">Github</span>
                                             </a>
                                         </button>
 
-                                        <a
-                                            href={selectedProject.deployed_url}
-                                            className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-300 rounded-sm dark:bg-black-500"
-                                        >
-                                            <AiFillProject /> <span>Project</span>
-                                        </a>
+
+                                        <button className="mt-4">
+                                            <a
+                                                href={selectedProject.deployed_url}
+                                                className="flex items-center justify-center w-full h-full"
+                                            >
+                                                <AiFillProject size={24} className="text-[#fffce1]" /> {/* Set icon size and color */}
+                                                <span className="ml-3">Project</span>
+                                            </a>
+                                        </button>
                                     </div>
                                     <div className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
                                         {selectedProject.key_techs.map((value, i) => (
                                             <span
                                                 key={i}
-                                                className="p-1 px-2 my-1 bg-gray-300 rounded-sm dark:bg-black-500"
+                                                className="p-1 px-2 my-1 bg-green-500 rounded-sm dark:bg-black-500"
                                             >
                                                 {value}
                                             </span>
@@ -144,7 +149,7 @@ const Projects = () => {
 
                             {/* Close Button */}
                             <button
-                                className="absolute p-1 bg-gray-200 rounded-full top-3 right-3 focus:outline-none dark:bg-black-200"
+                                className="absolute p-1 bg-transparent rounded-full top-3 right-3 focus:outline-none dark:bg-black-200"
                                 onClick={() => handleShowDetail(null)}
                             >
                                 <MdClose size={30} />

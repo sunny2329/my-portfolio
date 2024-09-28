@@ -43,5 +43,21 @@ const logos = [
     {
         src:'/mysql.png',
         alt: "MySQL Logo",
+    },
+    {
+        src:'/tailwind.png',
+        alt: "Tailwind CSS Logo",
+    },
+    {
+        src:'/typescript.png',
+        alt: "TypeScript Logo",
+    },
+    {
+        src:'/nextjs1.png',
+        alt: "Next.js Logo",
+    },
+    {
+        src:'/redux.png',
+        alt: "Redux Logo",
     }
 ];

@@ -23,13 +23,13 @@ const Sidebar = () => {
         alt="avatar"
         className="mx-auto border rounded-full "
       />
-      <h3 className="font-bold mt-0 mb-0" style={{ fontFamily: 'sans-serif' }}>
-        <TypewriterEffectSmooth words={[{ text: 'SOBHIT', className: 'text-[1.7rem] text-[#fffce1]' }, { text: 'SINHA', className: 'text-[1.7rem] text-[#fffce1]' }]} />
+      <h3 className="font-bold mt-3 text-2xl mb-0 text-[#fffce1]" style={{ fontFamily: 'sans-serif' }}>
+        SOBHIT SINHA
       </h3>
       <InfiniteMovingCardsDemo />
       {/* Resume */}
       <button onClick={() => {
-        window.open('https://drive.google.com/file/d/1KhoGVOOkyk_iHZA-s_Tq4mfFusufXRpl/view?usp=drive_link');
+        window.open('https://drive.google.com/file/d/1KhoGVOOkyk_iHZA-s_Tq4mfFsusufXRpl/view?usp=drive_link');
       }} className="bg-slate-800 z-0 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-md font-semibold leading-6  text-[#fffce1] inline-block">
         <span className="absolute inset-0 overflow-hidden rounded-full">
           <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
@@ -97,7 +97,7 @@ const Sidebar = () => {
       <div className="flex justify-around text-[#fffce1] w-9/12 mx-auto my-5 text-green md:w-full ">
         {/* //? THIS 👇 aria label */}
         <a
-          href="https://www.youtube.com/channel/UClW8d1f5m0QAE_Ig024EP6A"
+          href="https://www.leetcode.com/"
           aria-label="YouTube"
           title="Leetcode"
         >
