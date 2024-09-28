@@ -124,7 +124,7 @@ export const projects: IProject[] = [
         id: 7,
         name: "Algorithm Visualizer",
         //TODO add data
-        image_path: "/images/algoVisual.png",
+        image_path: "/images/algorithm.png",
         deployed_url: "https://visual-algorithm.web.app/",
         github_url: "https://github.com/Dey-Sumit/algorithm-visualizer",
         category: ["react"],

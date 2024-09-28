@@ -30,7 +30,7 @@ const Sidebar = () => {
       {/* Resume */}
       <button onClick={() => {
         window.open('https://drive.google.com/file/d/1KhoGVOOkyk_iHZA-s_Tq4mfFusufXRpl/view?usp=drive_link');
-      }} className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-md font-semibold leading-6  text-[#fffce1] inline-block">
+      }} className="bg-slate-800 z-0 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-md font-semibold leading-6  text-[#fffce1] inline-block">
         <span className="absolute inset-0 overflow-hidden rounded-full">
           <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
         </span>
@@ -56,7 +56,7 @@ const Sidebar = () => {
       </button>
       <button onClick={() => {
         window.location.href = "mailto:sobhit230@gmail.com";
-      }} className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-sm mt-3 font-semibold leading-6  text-[#fffce1] inline-block">
+      }} className="bg-slate-800 z-[0] no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-sm mt-3 font-semibold leading-6  text-[#fffce1] inline-block">
         <span className="absolute inset-0 overflow-hidden rounded-full">
           <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
         </span>
@@ -82,7 +82,7 @@ const Sidebar = () => {
       </button>
       <button onClick={() => {
         window.location.href = `tel:+91-9358250619`;
-      }} className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-sm mt-3 font-semibold leading-6  text-[#fffce1] inline-block">
+      }} className="bg-slate-800 z-0  no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-sm mt-3 font-semibold leading-6  text-[#fffce1] inline-block">
         <span className="absolute inset-0 overflow-hidden rounded-full">
           <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
         </span>

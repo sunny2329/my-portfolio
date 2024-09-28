@@ -1,8 +1,7 @@
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent } from "react";
 import { IProject } from "../types";
 import Image from "next/image";
 import { AiFillGithub, AiFillProject } from "react-icons/ai";
-// TODO Github
 import { MdClose } from "react-icons/md";
 import { fadeInUp, stagger } from "../animations";
 import { motion } from "framer-motion";
@@ -24,19 +23,9 @@ const ProjectCard: FunctionComponent<{
     setShowDetail,
     showDetail,
 }) => {
-        // TODO scroll to top
         return (
             <>
-                {/* //step 1 */}
-                {/* <Image
-        src={image_path}
-        alt={name}
-        layout="responsive"
-        width={300}
-        height={150}
-        onClick={() => setShowDetail(true)}
-        className="cursor-pointer "
-      /> */}
+                {/* Project Thumbnail */}
                 <Image
                     width="300"
                     height="150"
@@ -44,92 +33,82 @@ const ProjectCard: FunctionComponent<{
                     layout="responsive"
                     alt={name}
                     onClick={() => setShowDetail(id)}
-                    className="cursor-pointer "
+                    className="cursor-pointer"
                     quality={10}
                 />
-                {/* <img
-        width="300"
-        height="150"
-        src={image_path}
-        alt={name}
-        onClick={() => setShowDetail(id)}
-        className="cursor-pointer "
-      /> */}
 
                 <p className="my-2 text-center">{name}</p>
-                {/* //step 1 */}
 
+                {/* Modal: Shows when `showDetail` matches the project ID */}
                 {showDetail === id && (
-                    <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 rounded-lg md:p-10 dark:bg-black-100 dark:text-gray-100 md:grid-cols-2 gap-x-12 ">
-                        <motion.div variants={stagger} initial="initial" animate="animate">
-                            <motion.div
-                                className="border-4 border-gray-100 "
-                                variants={fadeInUp}
-                            >
-                                <Image
-                                    src={image_path}
-                                    alt={name}
-                                    className="overflow-hidden"
-                                    layout="responsive"
-                                    width={300}
-                                    height={150}
-                                />
-                                {/* <img src={image_path} alt={name} /> */}
-                            </motion.div>
-                            <motion.div
-                                className="flex justify-center my-4 space-x-3"
-                                variants={fadeInUp}
-                            >
-                                <a
-                                    href={github_url}
-                                    className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-300 rounded-sm dark:bg-black-500 "
-                                >
-                                    <AiFillGithub /> <span>Github</span>
-                                </a>
-                                <a
-                                    href={deployed_url}
-                                    className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-300 rounded-sm dark:bg-black-500"
-                                >
-                                    <AiFillProject /> <span>Project</span>
-                                </a>
-                            </motion.div>
-                        </motion.div>
-                        <motion.div variants={stagger} initial="initial" animate="animate">
-                            <motion.h2
-                                variants={fadeInUp}
-                                className="mb-3 text-xl font-medium md:text-2xl "
-                            >
-                                {name}
-                            </motion.h2>
-                            <motion.h3
-                                variants={fadeInUp}
-                                className="my-3 text-base font-medium"
-                            >
-                                {description}
-                            </motion.h3>
+                    <>
+                        {/* Modal Background Overlay */}
+                        <div 
+                            className="fixed inset-0 z-20 bg-black bg-opacity-50 backdrop-blur-sm"
+                            onClick={() => setShowDetail(null)} // Close modal on background click
+                        ></div>
 
+                        {/* Modal Content */}
+                        <div className="fixed inset-0 z-30 flex items-center justify-center p-4">
                             <motion.div
-                                variants={fadeInUp}
-                                className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider"
+                                className="relative w-full max-w-4xl p-6 bg-gray-100 rounded-lg dark:bg-black-100 dark:text-gray-100"
+                                variants={stagger}
+                                initial="initial"
+                                animate="animate"
                             >
-                                {key_techs.map((value, i) => (
-                                    <span
-                                        key={i}
-                                        className="p-1 px-2 my-1 bg-gray-300 rounded-sm dark:bg-black-500"
-                                    >
-                                        {value}
-                                    </span>
-                                ))}
-                            </motion.div>
-                        </motion.div>
+                                {/* Image and Links Section */}
+                                <motion.div
+                                    className="flex flex-col md:flex-row"
+                                    variants={fadeInUp}
+                                >
+                                    <Image
+                                        src={image_path}
+                                        alt={name}
+                                        className="w-full md:w-1/2 h-auto rounded-lg"
+                                        layout="responsive"
+                                        width={300}
+                                        height={150}
+                                    />
+                                    <div className="mt-4 md:mt-0 md:ml-6">
+                                        <h2 className="text-2xl font-semibold">{name}</h2>
+                                        <p className="mt-2">{description}</p>
+                                        <div className="flex mt-4 space-x-3">
+                                            <a
+                                                href={github_url}
+                                                className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-300 rounded-sm dark:bg-black-500"
+                                            >
+                                                <AiFillGithub /> <span>Github</span>
+                                            </a>
+                                            <a
+                                                href={deployed_url}
+                                                className="flex items-center px-4 py-2 space-x-3 text-lg bg-gray-300 rounded-sm dark:bg-black-500"
+                                            >
+                                                <AiFillProject /> <span>Project</span>
+                                            </a>
+                                        </div>
+                                        <div className="flex flex-wrap mt-5 space-x-2 text-sm tracking-wider">
+                                            {key_techs.map((value, i) => (
+                                                <span
+                                                    key={i}
+                                                    className="p-1 px-2 my-1 bg-gray-300 rounded-sm dark:bg-black-500"
+                                                >
+                                                    {value}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </motion.div>
 
-                        <button
-                            className="absolute p-1 bg-gray-200 rounded-full top-3 right-3 focus:outline-none dark:bg-black-200"
-                            onClick={() => setShowDetail(null)}
-                        >
-                            <MdClose size={30} />
-                        </button>
-                    </div>
+                                {/* Close Button */}
+                                <button
+                                    className="absolute p-1 bg-gray-200 rounded-full top-3 right-3 focus:outline-none dark:bg-black-200"
+                                    onClick={() => setShowDetail(null)}
+                                >
+                                    <MdClose size={30} />
+                                </button>
+                            </motion.div>
+                        </div>
+                    </>
                 )}
             </>
         );
