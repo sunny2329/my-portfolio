@@ -14,7 +14,7 @@ import Image from "next/image";
 const Projects = () => {
     const [projects, setProjects] = useState(projectsData);
     const [active, setActive] = useState("All");
-    const [showDetail, setShowDetail] = useState<null | Number>(null); // State for which project to show
+    const [showDetail, setShowDetail] = useState<null | number>(null); // State for which project to show
     const [selectedProject, setSelectedProject] = useState<IProject | null>(null); // State for storing the selected project details
 
     const handleFilterCategory = (category: Category | "all") => {

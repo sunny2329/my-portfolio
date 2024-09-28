@@ -1,12 +1,8 @@
 'use client'
-import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
-import { GiTie } from "react-icons/gi";
+import { AiFillGithub, AiFillLinkedin} from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import Image from "next/image";
 import { InfiniteMovingCardsDemo } from "./InfiniteSlider";
-import { TextRevealCard } from "./ui/text-reveal-card";
-import { TypewriterEffect, TypewriterEffectSmooth } from "./ui/typewriter-effect";
-import { GrDocumentUser } from "react-icons/gr";
 import { SiLeetcode } from "react-icons/si";
 
 const Sidebar = () => {

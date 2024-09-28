@@ -1,10 +1,6 @@
 import { FunctionComponent } from "react";
 import { IProject } from "../types";
 import Image from "next/image";
-import { AiFillGithub, AiFillProject } from "react-icons/ai";
-import { MdClose } from "react-icons/md";
-import { fadeInUp, stagger } from "../animations";
-import { motion } from "framer-motion";
 
 const ProjectCard: FunctionComponent<{
     project: IProject;
@@ -14,14 +10,9 @@ const ProjectCard: FunctionComponent<{
     project: {
         name,
         image_path,
-        deployed_url,
-        github_url,
-        description,
-        key_techs,
         id,
     },
     setShowDetail,
-    showDetail,
 }) => {
         return (
             <>

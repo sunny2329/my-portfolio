@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 
 const NavItem: FunctionComponent<{
     active: string
-    setActive: Function
+    setActive: (name: string) => void;
     name: string
     route: string
 }> = ({ active, setActive, name, route }) => {

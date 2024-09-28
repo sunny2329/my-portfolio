@@ -5,20 +5,9 @@ import Sidebar from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
 import { AnimatePresence } from "framer-motion";
 import "./globals.css";
-import { motion } from "framer-motion";
 import { BoxesCore } from "@/components/ui/background-boxes";
 
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Sobhit Sinha",

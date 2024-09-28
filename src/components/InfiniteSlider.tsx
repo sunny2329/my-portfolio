@@ -1,6 +1,5 @@
 "use client";
-import HTML from '/html.png'
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {

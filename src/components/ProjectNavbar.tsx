@@ -4,9 +4,9 @@ import { Category } from "../types";
 const NavItem: FunctionComponent<{
     value: Category | "all";
     active: string;
-    handleFilterCategory: Function;
+    handleFilterCategory: (category: Category | "all") => void;
 }> = ({ value, active, handleFilterCategory }) => {
-    var className = "capitalize cursor-pointer hover:text-green";
+    let className = "capitalize cursor-pointer hover:text-green";
     if (active === value) className += " text-green";
 
     return (
@@ -17,7 +17,7 @@ const NavItem: FunctionComponent<{
 };
 
 const ProjectNavbar: FunctionComponent<{
-    handleFilterCategory: Function;
+    handleFilterCategory: (category: Category | "all") => void;
     active: string;
 }> = (props) => {
     return (
