@@ -56,18 +56,18 @@ const Projects = () => {
                 active={active}
             />
 
-            {/* Project Grid */}
+            {/* Responsive Project Grid */}
             <motion.div
                 variants={stagger}
                 initial="initial"
                 animate="animate"
-                className="relative grid grid-cols-12 gap-4 my-3"
+                className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-3"
             >
                 {projects.map((project) => (
                     <motion.div
                         variants={fadeInUp}
                         key={project.id}
-                        className="col-span-12 p-2 bg-transparent border-2 border-[#42433d] font-bold text-[#fffce1] rounded-lg dark:bg-black-200 sm:col-span-6 lg:col-span-4"
+                        className="col-span-1 p-2 bg-transparent border-2 border-[#42433d] font-bold text-[#fffce1] rounded-lg dark:bg-black-200"
                     >
                         <ProjectCard
                             project={project}
@@ -104,11 +104,9 @@ const Projects = () => {
                                 <Image
                                     src={selectedProject.image_path}
                                     alt={selectedProject.name}
-                                    // className="w-[50%] md:w-[20%] h-auto rounded-lg"
                                     layout="responsive"
                                     width={300}
                                     height={150}
-                                    // style={{ maxWidth: "100%", height: "auto" }}
                                     className="w-full sm:w-[90%] md:w-[50%] lg:w-[30%] max-w-md h-auto"
                                 />
                                 <div className="mt-4 md:mt-0 md:ml-6">

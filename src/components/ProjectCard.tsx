@@ -26,21 +26,23 @@ const ProjectCard: FunctionComponent<{
         return (
             <>
                 {/* Project Thumbnail */}
-                <Image
-                    width="300"
-                    height="150"
-                    src={image_path}
-                    layout="responsive"
-                    alt={name}
+                <div
+                    className="lg:max-w-[240px] md:max-w-[240px] max-w-full h-[120px] relative cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out overflow-hidden rounded-lg"
                     onClick={() => setShowDetail(id)}
-                    className="cursor-pointer hover:scale-110 rounded-lg transition-all duration-100 ease-in-out"
-                    quality={10}
-                />
+                >
+                    <Image
+                        src={image_path}
+                        alt={name}
+                        layout="fill" // Fills the parent div
+                        objectFit="cover" // Ensures the image covers the area with cropping if needed
+                        quality={10}
+                    />
+                </div>
 
                 <p className="my-2 text-center">{name}</p>
 
                 {/* Modal: Shows when `showDetail` matches the project ID */}
-                
+
             </>
         );
     };
